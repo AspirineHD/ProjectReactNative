@@ -3,8 +3,8 @@ import { View, Text } from 'react-native'
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from './screens/HomeScreen';
-import AboutScreen from './screens/AboutScreen';
+import FirstPage from './screens/FirstPage';
+import SecondPage from './screens/SecondPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -24,14 +24,14 @@ const App = () => {
         }}
       >
         <Stack.Screen 
-          name="Home" 
-          component={HomeScreen} 
-          options={{title:'หน้าหลัก'}}
+          name="FirstPage" 
+          component={FirstPage} 
+          options={{title:'First Page'}}
         />
         <Stack.Screen 
-          name="About" 
-          component={AboutScreen} 
-          options={{title:'เกี่ยวกับเรา'}}
+          name="SecondPage" 
+          component={SecondPage} 
+          options={{title:'Second Page'}}
         />
       </Stack.Navigator>
     </NavigationContainer>
